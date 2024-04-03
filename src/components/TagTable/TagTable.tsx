@@ -7,7 +7,11 @@ import {
   TableRow,
   Paper,
 } from "@mui/material";
-import { TagTableProps } from "./TagTableTypes";
+import { Tag } from "../../types";
+
+type TagTableProps = {
+  tags: Tag[];
+};
 
 export const TagTable = ({ tags }: TagTableProps) => {
   return (

@@ -1,5 +1,13 @@
 import { TextField, Select, MenuItem, Stack } from "@mui/material";
-import { TagControlsProps } from "./TagControlsTypes";
+
+type TagControlsProps = {
+  pageSize: number;
+  setPageSize: (value: number) => void;
+  sortField: string;
+  setSortField: (value: string) => void;
+  sortOrder: string;
+  setSortOrder: (value: string) => void;
+};
 
 export const TagControls = ({
   pageSize,
