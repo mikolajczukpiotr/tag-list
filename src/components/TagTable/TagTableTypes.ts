@@ -1,4 +1,4 @@
-import { Tag } from ".";
+import { Tag } from "../../types";
 
 export type TagTableProps = {
   tags: Tag[];

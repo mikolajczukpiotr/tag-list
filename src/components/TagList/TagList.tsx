@@ -1,6 +1,6 @@
 import Pagination from "@mui/material/Pagination";
 import { TagTable } from "../TagTable";
-import { TagListProps } from "../../types/TagList";
+import { TagListProps } from "./TagListTypes";
 
 export const TagList = ({
   tags,

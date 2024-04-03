@@ -1,5 +1,5 @@
 import { TextField, Select, MenuItem, Stack } from "@mui/material";
-import { TagControlsProps } from "../../types/TagControls";
+import { TagControlsProps } from "./TagControlsTypes";
 
 export const TagControls = ({
   pageSize,
