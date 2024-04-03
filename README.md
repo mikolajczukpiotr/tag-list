@@ -22,7 +22,13 @@ git clone https://github.com/mikolajczukpiotr/tag-list.git
 cd tag-list
 ```
 
-2. Install the dependencies:
+2. Copy the sample environment file and set your variables:
+
+```bash
+cp .env.sample .env
+```
+
+3. Install the dependencies:
 
 ```bash
 npm ci

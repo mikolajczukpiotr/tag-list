@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { TagControls } from "./components/TagControls";
+
 import axios from "axios";
 import { TagList } from "./components/TagList";
 import { Alert, CircularProgress, Stack } from "@mui/material";
 
-const API_URL = "https://api.stackexchange.com/2.3/tags";
-const SITE_NAME = "stackoverflow";
+const API_URL = process.env.REACT_APP_API_URL;
+const SITE_NAME = process.env.REACT_APP_SITE_NAME;
 
 const App = () => {
   const [tags, setTags] = useState([]);
@@ -20,7 +21,7 @@ const App = () => {
   const fetchTags = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(API_URL, {
+      const response = await axios.get(API_URL ?? "", {
         params: {
           page,
           pagesize: pageSize,
