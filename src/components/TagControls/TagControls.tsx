@@ -1,13 +1,5 @@
-import { TextField, Select, MenuItem } from "@mui/material";
-
-type TagControlsProps = {
-  pageSize: number;
-  setPageSize: (value: number) => void;
-  sortField: string;
-  setSortField: (value: string) => void;
-  sortOrder: string;
-  setSortOrder: (value: string) => void;
-};
+import { TextField, Select, MenuItem, Stack } from "@mui/material";
+import { TagControlsProps } from "../../types/TagControls";
 
 export const TagControls = ({
   pageSize,
@@ -18,7 +10,7 @@ export const TagControls = ({
   setSortOrder,
 }: TagControlsProps) => {
   return (
-    <div>
+    <Stack direction="row" spacing={4}>
       <TextField
         type="number"
         value={pageSize}
@@ -26,12 +18,13 @@ export const TagControls = ({
       />
       <Select value={sortField} onChange={(e) => setSortField(e.target.value)}>
         <MenuItem value="name">Name</MenuItem>
-        <MenuItem value="count">Count</MenuItem>
+        <MenuItem value="activity">Activity</MenuItem>
+        <MenuItem value="popular">Popular</MenuItem>
       </Select>
       <Select value={sortOrder} onChange={(e) => setSortOrder(e.target.value)}>
         <MenuItem value="asc">Ascending</MenuItem>
         <MenuItem value="desc">Descending</MenuItem>
       </Select>
-    </div>
+    </Stack>
   );
 };
